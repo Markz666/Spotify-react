@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link, Switch } from "react-router-dom";
-
+import { Helmet } from 'react-helmet';
 import TrackListContainer from "./TrackListContainer";
 import TrackEntryContainer from "./TrackEntryContainer";
 import ArtistListContainer from "./ArtistListContainer";
@@ -62,6 +62,11 @@ class Site extends Component {
             />
             <Route path="/error" component={ErrorPage}/>
           </Switch>
+        </div>
+        <div className="body">
+          <Helmet>
+              <style>{'body { background-color: #E3DFDB; }'}</style>
+          </Helmet>
         </div>
       </div>
     );
